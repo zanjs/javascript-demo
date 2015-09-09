@@ -4,15 +4,16 @@
 	<meta charset="UTF-8">
 	<title>js 插件开发 之 LightBox by zan3.com</title>
 	<link rel="stylesheet" href="./stylesheets/lightbox.css">
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
 	<!-- 遮罩 -->
-	<div id="z-lightbox-mask"></div>
+	<!-- <div id="z-lightbox-mask"></div> -->
 	<!-- 遮罩 end-->
 	<!-- 主题层 -->
-	<div id="z-lightbox">
+	<!-- <div id="z-lightbox">
 		<div class="lightbox-view">
-			<span class="lightbox-btn lightbox-prev-btn"><</span>
+			<span class="lightbox-btn lightbox-prev-btn lightbox-prev-btn-show"><</span>
 			<img src="./images/1-1.png" alt="" class="lightbox-img">
 			<span class="lightbox-btn lightbox-next-btn">></span>
 		</div>
@@ -23,7 +24,13 @@
 			</div>
 			<span class="lightbox-close-btn"></span>
 		</div>
-	</div>
+	</div> -->
 	<!-- 主题层 end -->
 </body>
+<script src="./js/lightbox.js"></script>
+<script>
+	$(function(){
+		var lightbox = new LightBox();
+	})
+</script>
 </html>
