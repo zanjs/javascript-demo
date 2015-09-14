@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>get Json</title>
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+	<ul class="red"></ul>
+	<ul class="blue"></ul>
+	<ul class="yellow"></ul>
+</body>
+<script>
+	initAreaData();
+
+
+	function initAreaData() {
+		var dataJson = "./data.json";
+		$.getJSON(dataJson, function (data) {
+
+			redHtml(data.red);
+			blueHtml(data.blue);
+			yellowHtml(data.yellow);
+		});
+	};
+
+	function redHtml(data){
+		var len = data.length,
+				str = '';
+		for(var i=0;i<len;i++){
+			str += '<li>'+ data[i].name +'</li>'
+		}
+		$(".red").html(str);
+	}
+	function blueHtml(data){
+		var len = data.length,
+				str = '';
+		for(var i=0;i<len;i++){
+			str += '<li>'+ data[i].name +'</li>'
+		}
+		$(".blue").html(str);
+	}
+	function yellowHtml(data){
+		var len = data.length,
+				str = '';
+		for(var i=0;i<len;i++){
+			str += '<li>'+ data[i].name +'</li>'
+		}
+		$(".yellow").html(str);
+	}
+</script>
+</html>
