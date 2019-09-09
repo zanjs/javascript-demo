@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "JS-LightBox/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
